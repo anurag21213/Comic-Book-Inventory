@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "a9081934-a62d-4780-a04c-4261fdb90c64",
+		"name": "Comic",
+		"description": "All API's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27953135"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"item": [
+				{
+					"name": "Create Comic Book listing",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"book_name\":\"h7\",\r\n    \"author_name\":\"ak\",\r\n    \"year_of_publication\":\"2022\",\r\n    \"price\":1400,\r\n    \"discount\":false,\r\n    \"number_of_pages\":500,\r\n    \"condition\":\"old\",\r\n    \"description\":\"nice book\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "It is a post route by using which we can create a new listing of a comic book."
+		},
+		{
+			"name": "update",
+			"item": [
+				{
+					"name": "update listing",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"book_name\":\"f5\",\r\n    \"author_name\":\"ak\",\r\n    \"year_of_publication\":\"2024\",\r\n    \"price\":1200,\r\n    \"discount\":false,\r\n    \"number_of_pages\":500,\r\n    \"condition\":\"old\",\r\n    \"description\":\"nice book\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/edit/670f5768a4079ddea5f889ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"edit",
+								"670f5768a4079ddea5f889ab"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Edit api for editing the entries of the existing comic book."
+		},
+		{
+			"name": "delete",
+			"item": [
+				{
+					"name": "delete comic book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"book_name\":\"f5\",\r\n    \"author_name\":\"ak\",\r\n    \"year_of_publication\":\"2024\",\r\n    \"price\":1400,\r\n    \"discount\":false,\r\n    \"number_of_pages\":500,\r\n    \"condition\":\"old\",\r\n    \"description\":\"nice book\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/delete/670f5e99750f68d28244fbc0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"delete",
+								"670f5e99750f68d28244fbc0"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Delete API for deleting the specific comic book."
+		},
+		{
+			"name": "fetch book with pagination,filter and sorting",
+			"item": [
+				{
+					"name": "fetch comic books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/get_comic/?skip=0&fprice=500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"get_comic",
+								""
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "fprice",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "All in one API for fetching all the comic book ,with or without filter and sorting."
+		},
+		{
+			"name": "get specific book",
+			"item": [
+				{
+					"name": "get specific comic book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/get_book/670f75a636a29ef9b3be3353",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"get_book",
+								"670f75a636a29ef9b3be3353"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Get API fro getting the data of specific comic book."
+		}
+	]
+}
